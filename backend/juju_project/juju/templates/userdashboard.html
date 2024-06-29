@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUJU Food Delivery</title>
+    <link rel="stylesheet" href="{% static 'css/userdashboard.css' %}" />
+  </head>
+  <body>
+    <div
+      class="sidebar"
+    >
+      <div class="logo">
+        <img
+          class="logoimage item"
+          src="{% static '/images/JUJU__2_-removebg-preview.png' %}"
+          alt="JUJU Logo"
+        />
+      </div>
+      <div class="user-info">
+        <img class="item" src="{% static '/images/zidan.jpg' %}" alt="User Avatar" />
+        <span class="item" style="margin: 0">Zidan Rai</span>
+      </div>
+      <div class="menu">
+        <h3 class="item" style="font-size: 15px">Menu</h3>
+        <div class="menu-item active">
+          <img src="{% static '/images/time2.svg' %}" alt="Order History" />
+          Order History
+        </div>
+        <div class="menu-item">
+          <img style="color: aliceblue" src="{% static '/images/pin.svg' %}" alt="Locations" />
+          Locations
+        </div>
+        <h3 class="item" style="font-size: 15px">General</h3>
+        <div class="menu-item">
+          <img src="{% static '/images/setting.svg' %}" alt="Settings" />
+          Settings
+        </div>
+        <div class="menu-item">
+          <img src="{% static '/images/help.svg' %}" alt="Help" />
+          Help
+        </div>
+      </div>
+      <div class="menu-item" style="margin-bottom: 2rem">
+        <img src="{% static '/images/logout.svg' %}" alt="Log Out" />
+        <a href="{% url 'home' %}">Log Out</a>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="header">
+        <div class="location">
+          <img src="{% static '/images/pin2.svg' %}" alt="Location" />
+          Kathmandu
+        </div>
+        <div class="cart">
+          <img src="{% static '/images/cart.svg' %}" alt="Cart" />
+          <a style="color: black;" href="{% url 'cart' %}">My Cart</a> 
+          <span id="cart-count">0</span>
+        </div>
+      </div>
+
+      <input type="text" class="search-bar" placeholder="Search" />
+
+      <h2>Hot Local Foods 🔥</h2>
+      <div class="food-items">
+        <div class="food-item">
+          <img src="{% static '/images/Bara.png' %}" alt="Bara" />
+          <div class="food-info">
+            <h3>Bara</h3>
+            <div>⭐ 4.2 (12 reviews)</div>
+            <div style="color: #ffa500; font-size: 12px">Rs 150</div>
+          </div>
+          <button class="add-btn" onclick="addToCart('Bara', 150,)">+</button>
+        </div>
+        <div class="food-item">
+          <img src="{% static '/images/Yomari.png' %}" alt="Yomari" />
+          <div class="food-info">
+            <h3>Yomari</h3>
+            <p>⭐ 4.2 (12 reviews)</p>
+            <div style="color: #ffa500; font-size: 12px">Rs 150</div>
+          </div>
+          <button class="add-btn" onclick="addToCart('Yomari', 150)">+</button>
+        </div>
+        <div class="food-item">
+          <img src="{% static '/images/Dhindo.png' %}" alt="Bara" />
+          <div class="food-info">
+            <h3>Dhindo</h3>
+            <div>⭐ 4.2 (12 reviews)</div>
+            <div style="color: #ffa500; font-size: 12px">Rs 150</div>
+          </div>
+          <button class="add-btn" onclick="addToCart('Bara', 150,)">+</button>
+        </div>
+        <div class="food-item">
+          <img src="{% static '/images/sapumiicha.png' %}" alt="Bara" />
+          <div class="food-info">
+            <h3>Sapumiicha</h3>
+            <div>⭐ 4.2 (12 reviews)</div>
+            <div style="color: #ffa500; font-size: 12px">Rs 150</div>
+          </div>
+          <button class="add-btn" onclick="addToCart('Bara', 150,)">+</button>
+        </div>
+      </div>
+
+      <h2>Local Food Vendors 📍</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14131.99467821472!2d85.3253260340404!3d27.68643600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199591994561%3A0xa307605b719430ba!2sBhaktapur%20Juju%20Dhau!5e0!3m2!1sen!2snp!4v1719579095497!5m2!1sen!2snp"
+          width="1083"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+  <script src="{% static 'js/userdashboard.js' %}"></script>
+</html>

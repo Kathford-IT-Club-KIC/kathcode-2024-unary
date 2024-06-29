@@ -1,0 +1,144 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #ffffff;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.sidebar {
+    width: 250px;
+    background-color: #FFA500;
+    color: white;
+}
+
+/* .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+} */
+
+.logo img {
+    width: 150px;
+    height: 150px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.menu-item {
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+.item{
+    margin-left: 30px;
+}
+
+/* .menu-item.active {
+    background-color: #4CAF50;
+} */
+
+.menu-item img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.location, .cart {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.food-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.food-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+
+.food-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.food-info {
+    flex: 1;
+}
+
+.add-btn {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.map-container {
+    margin-top: 20px;
+    border: 2px solid #FFA500;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-container img {
+    width: 100%;
+    display: block;
+}
+
+
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}

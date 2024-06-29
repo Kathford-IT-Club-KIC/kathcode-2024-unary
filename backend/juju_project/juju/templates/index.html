@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JuJu</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            class="logo"
+            src="{% static 'images/JUJU__2_-removebg-preview.png' %}"
+            alt="juju Logo"
+          />
+        </div>
+        <ul class="nav-links">
+          <li><a class="navright" href="#">Home</a></li>
+          <li><a class="navright" href="{% url 'menu' %}">Menu</a></li>
+          <li><a class="navright" href="{% url 'map' %}">Map</a></li>
+          <li><a class="navright" href="#">About</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <button class="btn-secondary" style="margin-right: 0">
+            <a href="{% url 'signup' %}">Sign up</a>
+          </button>
+          <button
+            class="btn-primary"
+            style="margin-left: 10px; margin-right: 70px"
+          >
+            <a href="{% url 'userlogin' %}">Log In</a>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="mainpage container">
+        <div class="main-content">
+          <h1>
+            Local Cuisine,<br />Delivered Right to Your
+            <span class="highlight">Doorstep</span>
+          </h1>
+          <p>
+            Order from your favorite local restaurants and enjoy hassle-free
+            delivery with JUJU. We're committed to bringing you fast, friendly
+            service and mouth-watering meals that are sure to satisfy.
+          </p>
+          <p class="cuisine-count">150+ Cuisine to choose from</p>
+          <button class="order">
+            <a href="{% url 'signup' %}">Order Now</a>
+            <span class="arrow">→</span>
+          </button>
+        </div>
+        <div class="hero-image">
+          <img src="{% static 'images/bike.svg' %}" alt="Delivery Scooter" />
+        </div>
+      </section>
+
+      <!-- <section class="stats">
+            <div class="stat-item">
+                <img src="/images/divider_person_one.svg" alt="Happy Customers">
+                <p>13,000+ Happy Customers</p>
+            </div>
+            <div class="stat-item">
+                <img src="/images/divider_person_two.svg" alt="Meal Icon">
+                <p>100+ Local Restaurants</p>
+            </div>
+        </section> -->
+
+      <section class="about">
+        <h2 class="pagehead">Who we are</h2>
+        <p>
+          Juju delivers the best food from your favorite local restaurants, with
+          fast and friendly service. Our team is dedicated to ensuring that
+          every order is delivered with care and attention to detail. Thank you
+          for choosing Juju!
+        </p>
+        <div class="service-icons">
+          <img src="{% static '/images/Order.svg' %}" alt="Order" />
+          <img src="{% static '/images/Delivery.svg' %}" alt="Delivery" />
+          <img src="{% static '/images/Enjoyment.svg' %}" alt="Enjoyment" />
+        </div>
+      </section>
+
+      <section class="featured-dishes">
+        <h2 class="pagehead">Featured Dishes</h2>
+        <div class="dishes">
+          <div class="dish">
+            <img src="{% static 'images/chatamari.png' %}" alt="Shoyu Ramen" />
+            <h3>chatamari</h3>
+            <p class="price-button">Rs 200</p>
+            <button class="btn-secondary"><a href="{% url 'signup' %}">Add to Cart</a></button>
+          </div>
+          <div class="dish">
+            <img src="{% static '/images/Yomari.png' %}" alt="Pizza" />
+            <h3>Yomari</h3>
+            <p class="price-button">Rs 40</p>
+            <button class="btn-secondary"><a href="{% url 'signup' %}">Add to Cart</a></button>
+          </div>
+          <div class="dish">
+            <img src="{% static '/images/sapumiicha.png' %}" alt="Pizza" />
+            <h3>sapumiicha</h3>
+            <p class="price-button">Rs 450</p>
+            <button class="btn-secondary"><a href="{% url 'signup' %}">Add to Cart</a></button>
+          </div>
+          <div class="dish">
+            <img src="{% static '/images/Dhindo.png' %}" alt="Pizza" />
+            <h3>Dhindo</h3>
+            <p class="price-button">Rs 80</p>
+            <button class="btn-secondary"><a href="{% url 'signup' %}">Add to Cart</a></button>
+          </div>
+          <div class="dish">
+            <img src="{% static '/images/Nwari_Khaja.png' %}" alt="Pizza" />
+            <h3><a href="{% url 'signup' %}">Newari khaja</a></h3>
+            <p class="price-button">Rs 90</p>
+            <button  class="btn-secondary"><a href="{% url 'signup' %}">Add To Cart</a></button>
+          </div>
+        </div>
+        <div class="dish-nav">
+          <button class="btn-nav">&lt;</button>
+          <button class="btn-nav">&gt;</button>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h2 class="pagehead">Live Food Locations</h2>
+        <div class="testimonial">
+          <p>See Where Your Favorite Local Food Are</p>
+          <div class="testimonial-authors">
+            <img src="{% static '/images/divider_person_one.svg' %}" alt="Customer 1" />
+            <img src="{% static '/images/divider_person_two.svg' %}" alt="Customer 2" />
+            <img src="{% static '/images/divider_person_three.svg' %}" alt="Customer 3" />
+            <img src="{% static '/images/divider_person_two.svg' %}" alt="Customer 4" />
+          </div>
+        </div>
+        <button class="btn-secondary" style="margin-top: 20px">Map</button>
+      </section>
+
+      <section class="cta">
+        <div class="cta-content">
+          <img src="{% static '/images/cta_steak.svg' %}" alt="Food Icon" class="food-icon" />
+          <h2 style="font-size: 30px">
+            Sign Up for Healthy, Delicious Meals<br />Delivered Straight to Your
+            Door.
+          </h2>
+          <p style="font-size: 15px; font-weight: lighter">
+            Enjoy fresh, healthy meals without any cooking or meal prep.
+          </p>
+          <button class="finalbutton">
+            <a href="{% url 'signup' %}" style="color: #ffa500">Sign up</a>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img
+            class="logo"
+            src="{% static '/images/JUJU__2_-removebg-preview.png' %}"
+            alt=""
+          />
+        </div>
+        <p>&copy;Team Unary 2023 Copyright</p>
+        <div class="social-icons">
+          <a href="#"><img src="{% static '/images/facebookIcon.svg' %}" alt="Facebook" /></a>
+          <a href="#"><img src="{% static '/images/twitIcon.svg' %}" alt="Twitter" /></a>
+          <a href="#"><img src="{% static '/images/instaIcon.svg' %}" alt="Instagram" /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/active.js"></script>
+  </body>
+</html>

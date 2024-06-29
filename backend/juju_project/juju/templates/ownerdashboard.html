@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUJU Food Delivery</title>
+    <link
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css'
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/userdashboard.css' %}" />
+  </head>
+  <body>
+    <div
+    class="sidebar"
+  >
+    <div class="logo">
+      <img
+        class="logoimage item"
+        src="{% static '/images/JUJU__2_-removebg-preview.png' %}"
+        alt="JUJU Logo"
+      />
+    </div>
+    <div class="user-info">
+      <img class="item" src="{% static '/images/zidan.jpg' %}" alt="User Avatar" />
+      <span class="item" style="margin: 0">Zidan Rai</span>
+    </div>
+    <div class="menu">
+      <h3 class="item" style="font-size: 15px">Menu</h3>
+      <div class="menu-item active">
+        <img src="{% static '/images/time2.svg' %}" alt="Order History" />
+        <a href="{% url 'ownerorderdetails' %}">Order Details</a> 
+      </div>
+      <div class="menu-item">
+        <img style="color: aliceblue" src="{% static '/images/pin.svg' %}" alt="Locations" />
+        Locations
+      </div>
+      <h3 class="item" style="font-size: 15px">General</h3>
+      <div class="menu-item">
+        <img src="{% static '/images/setting.svg' %}" alt="Settings" />
+        Settings
+      </div>
+      <div class="menu-item">
+        <img src="{% static '/images/help.svg' %}" alt="Help" />
+        Help
+      </div>
+    </div>
+    <div class="menu-item" style="margin-bottom: 2rem">
+      <img src="{% static '/images/logout.svg' %}" alt="Log Out" />
+      <a href="{% url 'home' %}">Log Out</a>
+    </div>
+  </div>
+
+      <div class="main-content flex-grow-1 p-4">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Set up <span class="text-success">Business</span></h3>
+            <form method="post" enctype="multipart/form-data" action="">
+              {% csrf_token %}
+              <div class="row mb-4">
+                  <div class="col">
+                      <label for="businessName" class="form-label">Add your Business</label>
+                      <div class="row">
+                          <div class="col-3">Name</div>
+                          <div class="col-9">
+                              <input type="text" class="form-control" id="businessName" name="businessName" placeholder="Enter business name" required />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="row mb-4">
+                  <div class="col">
+                      <label for="businessAddress" class="form-label">Add your location</label>
+                      <div class="row">
+                          <div class="col-3">Address</div>
+                          <div class="col-9">
+                              <input type="text" class="form-control" id="businessAddress" name="businessAddress" placeholder="Enter address" required />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="row mb-4">
+                  <div class="col">
+                      <label for="businessPhone" class="form-label">Add your Phone Number</label>
+                      <div class="row">
+                          <div class="col-3">Phone Number</div>
+                          <div class="col-9">
+                              <input type="text" class="form-control" id="businessPhone" name="businessPhone" placeholder="Enter phone number" required />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="row mb-4">
+                  <div class="col">
+                      <label for="menuItem" class="form-label">Add Menu Item</label>
+                      <div class="row mb-3">
+                          <div class="col-3">Name</div>
+                          <div class="col-9">
+                              <input type="text" class="form-control" id="menuItem" name="menuItem" placeholder="Enter food name" required />
+                          </div>
+                      </div>
+                      <div class="row mb-3">
+                          <div class="col-3">Description</div>
+                          <div class="col-9">
+                              <textarea class="form-control" id="menuDescription" name="menuDescription" placeholder="Enter food description" required></textarea>
+                          </div>
+                      </div>
+                      <div class="row mb-3">
+                          <div class="col-3">Image</div>
+                          <div class="col-9">
+                              <input type="file" class="form-control" id="menuImage" name="menuImage" required />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+          </form>
+          
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <img
+                src="{% static 'images/chatamari.png' %}"
+                class="img-fluid"
+                style="height: 330px; width: 550px;"
+              />
+            </div>
+            <div class="row" style="height: 60px; width: 100%;"></div>
+            <div class="row">
+              <div class="row mb-3">
+                <div class="col-3">Name</div>
+                <div class="col-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter food name"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-3">Description</div>
+                <div class="col-9">
+                  <textarea
+                    class="form-control"
+                    placeholder="Enter food description"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center gap-lg-5 mt-4">
+          <button type="button" class="btn btn-warning btn-lg rounded-5">Add More</button>
+          <button type="button" class="btn btn-warning btn-lg rounded-5">Save</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

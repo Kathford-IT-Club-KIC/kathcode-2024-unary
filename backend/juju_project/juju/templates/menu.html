@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JuJu</title>
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            class="logo"
+            src="{% static '/images/JUJU__2_-removebg-preview.png' %}"
+            alt=""
+          />
+        </div>
+        <ul class="nav-links">
+          <li><a class="navright" href="{% url 'home' %}">Home</a></li>
+          <li><a class="navright" href="{% url 'menu' %}">Menu</a></li>
+          <li><a class="navright" href="{% url 'map' %}">Map</a></li>
+          <li><a class="navright" href="#">About</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <button class="btn-secondary" style="margin-right: 0">
+            <a href="{% url 'signup' %}">Sign up</a>
+          </button>
+          <button
+            class="btn-primary"
+            style="margin-left: 10px; margin-right: 70px"
+          >
+            <a href="{% url 'userlogin' %}">Log In</a>
+          </button>
+        </div>
+      </nav>
+    
+      <section class="about">
+        <h2 class="pagehead">Experience The Exquisite Taste</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <img src="{% static '/images/sapumiicha.png' %}" /><br />Sampumiicha
+            <p class="item-name">Sampumiicha</p>
+            <p>Rs 200</p>
+          </div>
+          <div class="grid-item">
+            <img src="{% static '/images/Dhindo.png' %}" /><br />Dhindo
+            <p class="item-name">Kodo Dhindo</p>
+            <p>Rs 300</p>
+          </div>
+          <div class="grid-item">
+            <img src="{% static '/images/Nwari_Khaja.png' %}" /><br />khaja
+            <p class="item-name">Newari khaja set </p>
+            <p>Rs 300</p>
+          </div>
+          <div class="grid-item">
+            <img src="{% static '/images/Yomari.png' %}" /><br />Bara
+            <p class="item-name">Rasilo Bara</p>
+            <p class="item-price">Rs 100</p>
+          </div>
+          <div class="grid-item">
+            <img src="{% static '/images/sapumiicha.png' %}" /><br />Sampumiicha
+            <p class="item-name">Sampumiicha</p>
+            <p class="item-price">Rs 300</p>
+          </div>
+          <div class="grid-item">
+            <img src="{% static '/images/Nwari_Khaja.png' %}" /><br />khaja
+            <p class="item-name">Newari khaja set</p>
+            <p class="item-price">Rs 800</p>
+          </div>
+          <div class="grid-item">
+            <img src="{% static '/images/Dhindo.png' %}" /><br />Dhindo
+            <p class="item-name">Local Dhindo</p>
+            <p class="item-price">Rs 250</p>
+          </div>
+          <div class="grid-item">
+            <img src="{% static '/images/Bara.png' %}" /><br />Bara
+            <p class="item-name">Rasilo Bara</p>
+            <p class="item-price">Rs 60</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-dishes">
+        <h2 class="pagehead">Featured Dishes</h2>
+        <div class="dishes">
+          <div class="dish">
+            <img src="{% static '/images/chatamari.png' %}" alt="Shoyu Ramen" />
+            <h3>chatamari</h3>
+            <p class="price-button">Rs 200</p>
+            <button class="btn-secondary"><a href="{% url 'signup' %}">Add to Cart</a></button>
+          </div>
+          <div class="dish">
+            <img src="{% static '/images/Yomari.png' %}" alt="Pizza" />
+            <h3>Yomari</h3>
+            <p class="price-button">Rs 40</p>
+            <button class="btn-secondary"><a href="{% url 'signup' %}">Add to Cart</a></button>
+          </div>
+          <div class="dish">
+            <img src="{% static '/images/sapumiicha.png' %}" alt="Pizza" />
+            <h3>sapumiicha</h3>
+            <p class="price-button">Rs 450</p>
+            <button class="btn-secondary"><a href="{% url 'signup' %}">Add to Cart</a></button>
+          </div>
+          <div class="dish">
+            <img src="{% static '/images/Dhindo.png' %}" alt="Pizza" />
+            <h3>Dhindo</h3>
+            <p class="price-button">Rs 80</p>
+            <button class="btn-secondary"><a href="{% url 'signup' %}">Add to Cart</a></button>
+          </div>
+          <div class="dish">
+            <img src="{% static '/images/Nwari_Khaja.png' %}" alt="Pizza" />
+            <h3>Newari khaja</h3>
+            <p class="price-button">Rs 90</p>
+            <button class="btn-secondary"><a href="{% url 'signup' %}">Add to Cart</a></button>
+          </div>
+        </div>
+        <div class="dish-nav">
+          <button class="btn-nav">&lt;</button>
+          <button class="btn-nav">&gt;</button>
+        </div>
+      </section>
+
+
+
+    <footer>
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img
+            class="logo"
+            src="{% static '/images/JUJU__2_-removebg-preview.png' %}"
+            alt=""
+          />
+        </div>
+        <p>&copy;Team Unary 2023 Copyright</p>
+        <div class="social-icons">
+          <a href="#"><img src="{% static '/images/facebookIcon.svg' %}" alt="Facebook" /></a>
+          <a href="#"><img src="{% static '/images/twitIcon.svg' %}" alt="Twitter" /></a>
+          <a href="#"><img src="{% static '/images/instaIcon.svg' %}" alt="Instagram" /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/active.js"></script>
+  </body>
+</html>

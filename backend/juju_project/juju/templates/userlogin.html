@@ -1,0 +1,43 @@
+<!-- login.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUJU Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="arrow"><a href="{% url 'home' %}"><span><img src="{% static '/images/banner_arrow.svg' %}" alt="" srcset=""></span></a></div>
+    <div class="container">
+        <div class="login-container">
+            <h1 class="logo">JUJU</h1>
+            <h2>Login as user</h2>
+ 
+            <form method="post" action="{% url 'userlogin' %}">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <p style="font-size: 14px">
+                Are you a Owner?
+                <a href="{% url 'ownerlogin' %}"  style="color: #ffa500"
+                  >Login as Owner</a
+                >
+              </p>
+        </div>
+        
+        <div class="image-container">
+            <img class="loginimage" src="{% static '/images/JUJU__2_-removebg-preview.png' %}" alt="JUJU Icon" class="juju-icon">
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

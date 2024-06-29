@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cart</title>
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <img
+              class="logo"
+              src="{% static 'images/JUJU__2_-removebg-preview.png' %}"
+              alt="juju Logo"
+            />
+          </div>
+          <ul class="nav-links">
+            <li><a class="navright" href="{% url 'home' %}">Home</a></li>
+            <li><a class="navright" href="{% url 'menu' %}">Menu</a></li>
+            <li><a class="navright" href="{% url 'map' %}">Map</a></li>
+            <li><a class="navright" href="#">About</a></li>
+          </ul>
+
+          </div>
+        </nav>
+      </header>
+  
+ 
+        <main class="cartitem">
+            <h1>Cart Items</h1>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td><img src="{% static '/images/chatamari.png' %}" alt="Egg Biryani" class="item-image">Chatamari</td>
+                    <td></td>
+                    <td>
+                        <div class="quantity-control">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                    </td>
+                    <td>Rs 150</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static '/images/Nwari_Khaja.png' %}" alt="Egg Biryani" class="item-image">Newari Khaja Ghar</td>
+                    <td></td>
+                    <td>
+                        <div class="quantity-control">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                    </td>
+                    <td>Rs 150</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static '/images/Bara.png' %}" alt="Egg Biryani" class="item-image">Chatamari</td>
+                    <td></td>
+                    <td>
+                        <div class="quantity-control">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                    </td>
+                    <td>Rs 150</td>
+                </tr>
+                <!-- Add more rows for other items -->
+            </table>
+        </main>
+        <div class="summary">
+            <h3>Total Item: 3</h3>
+            <h3>Total Price:  RS 540</h3>
+            <p>Free delivery on Rs 40</p>
+            <button class="checkout-btn">CHECKOUT</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+          <div class="footer-logo">
+            <img
+              class="logo"
+              src="{% static '/images/JUJU__2_-removebg-preview.png' %}"
+              alt=""
+            />
+          </div>
+          <p>&copy;Team Unary 2023 Copyright</p>
+          <div class="social-icons">
+            <a href="#"><img src="{% static '/images/facebookIcon.svg' %}" alt="Facebook" /></a>
+            <a href="#"><img src="{% static '/images/twitIcon.svg' %}" alt="Twitter" /></a>
+            <a href="#"><img src="{% static '/images/instaIcon.svg' %}" alt="Instagram" /></a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
