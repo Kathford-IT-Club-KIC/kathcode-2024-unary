@@ -27,6 +27,9 @@ def cart_view(request):
 def ownerhome(request):
     return render(request, 'ownerhome.html')
 
+def usermenu(request):
+    return render(request, 'usermenu.html')
+
 def user_login_view(request):
     if request.method == 'POST':
         email = request.POST['email']

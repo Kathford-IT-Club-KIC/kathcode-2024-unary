@@ -137,18 +137,18 @@
             <img src="{% static '/images/divider_person_two.svg' %}" alt="Customer 4" />
           </div>
         </div>
-        <button class="btn-secondary" style="margin-top: 20px">Map</button>
+        <button class="btn-secondary" style="margin-top: 20px"><a href="{% url 'map' %}">Map</a> </button>
       </section>
 
       <section class="cta">
         <div class="cta-content">
-          <img src="{% static '/images/cta_steak.svg' %}" alt="Food Icon" class="food-icon" />
+          <img src="{% static '/images/Yomari.png' %}" alt="Food Icon" class="food-icon" />
           <h2 style="font-size: 30px">
-            Sign Up for Healthy, Delicious Meals<br />Delivered Straight to Your
+            Sign Up for Local Meal<br />Delivered Straight to Your
             Door.
           </h2>
           <p style="font-size: 15px; font-weight: lighter">
-            Enjoy fresh, healthy meals without any cooking or meal prep.
+            Enjoy fresh, Local  meals without any cooking or meal prep.
           </p>
           <button class="finalbutton">
             <a href="{% url 'signup' %}" style="color: #ffa500">Sign up</a>

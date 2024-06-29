@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUJU Food Delivery</title>
+    <link rel="stylesheet" href="{% static 'css/usermenu.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+      class="sidebar"
+      style="border-top-right-radius: 15px; border-bottom-right-radius: 15px"
+    >
+      <div class="logo">
+        <img
+          class="logoimage item"
+          src="{% static 'images/JUJU__2_-removebg-preview.png' %}"
+          alt="JUJU Logo"
+        />
+      </div>
+      <div class="user-info">
+        <img class="item" src="{% static 'images/zidan.jpg' %}" alt="User Avatar" />
+        <span class="item" style="margin: 0">Zidan Rai</span>
+      </div>
+      <div class="menu">
+        <h3 class="item" style="font-size: 15px">Menu</h3>
+        <div class="menu-item active">
+          <img src="{% static '/images/time2.svg' %}" alt="Order History" />
+          Order Details
+        </div>
+        <div class="menu-item">
+          <img style="color: aliceblue" src="{% static '/images/customer.svg' %}" alt="Locations" />
+          <a href="">Menu</a>
+        </div>
+        <h3 class="item" style="font-size: 15px">General</h3>
+        <div class="menu-item">
+          <img src="{% static '/images/setting.svg' %}" alt="Settings" />
+          Settings
+        </div>
+        <div class="menu-item">
+          <img src="{% static '/images/help.svg' %}" alt="Help" />
+          Help
+        </div>
+      </div>
+      <div class="menu-item" style="margin-bottom: 2rem">
+        <img src="{% static '/images/logout.svg' %}" alt="Log Out" />
+        <a href="{% url 'home' %}">Log Out</a>
+      </div>
+    </div>
+      </div>
+      <div class="main-content">
+        <div class="header">
+          <div class="location">
+            <img src="{% static '/images/pin2.svg' %}" alt="Location" />
+            Kathmandu
+          </div>
+        </div>
+        <h2>Menu</h2>
+        <input type="text" class="search-bar" placeholder="Search" />
+        <div class="container">
+            <div class="head" style="display: block;">
+                <h1 class="h1-header" style="left: 0;">Most Picked <span class="highlight">Foods</span>🤤</h1>
+                <button style="justify-content: flex-end; margin-bottom: 30px;" class="btn-secondary">View More →</button>
+            </div>
+            <div class="menu1">
+                <div class="menu1-item">
+                    <img src="{% static '/images/Bara.png' %}" alt="Bara">
+                    <h2>Bara</h2>
+                    <p class="price-juju">Rs 80</p>
+                    <button style="width: auto;" class="btn-secondary">Add to Cart</button>
+                </div>
+                <div class="menu1-item">
+                    <img src="{% static '/images/chatamari.png' %}" alt="">
+                    <h2>Chatamari</h2>
+                    <p class="price-juju">Rs 100</p>
+                    <button style="width: auto;" class="btn-secondary">Add to Cart</button>
+                </div>
+                <div class="menu1-item">
+                    <img src="{% static '/images/Yomari.png' %}" alt="">
+                    <h2>Yomari</h2>
+                    <p class="price-juju">Rs 90</p>
+                    <button style="width: auto;" class="btn-secondary">Add to Cart</button>
+                </div>
+                <div class="menu1-item">
+                    <img src="{% static '/images/sapumiicha.png' %}" alt="">
+                    <h2>Sapumiicha</h2>
+                    <p class="price-juju">Rs 60</p>
+                    <button style="width: auto;" class="btn-secondary">Add to Cart</button>
+                </div>
+                <div class="menu1-item">
+                    <img src="{% static '/images/Bara.png' %}" alt="Bara">
+                    <h2>Bara</h2>
+                    <p class="price-juju">Rs 80</p>
+                    <button style="width: auto;" class="btn-secondary">Add to Cart</button>
+                </div>
+                <div class="menu1-item">
+                    <img src="{% static '/images/chatamari.png' %}" alt="">
+                    <h2>Chatamari</h2>
+                    <p class="price-juju">Rs 100</p>
+                    <button style="width: auto;" class="btn-secondary">Add to Cart</button>
+                </div>
+                <div class="menu1-item">
+                    <img src="{% static '/images/Yomari.png' %}" alt="">
+                    <h2>Yomari</h2>
+                    <p class="price-juju">Rs 90</p>
+                    <button style="width: auto;" class="btn-secondary">Add to Cart</button>
+                </div>
+                <div class="menu1-item">
+                    <img src="{% static '/images/sapumiicha.png' %}" alt="Lemon Ice Tea">
+                    <h2>Sapumiicha</h2>
+                    <p class="price-juju">Rs 60</p>
+                    <button style="width: auto;" class="btn-secondary">Add to Cart</button>
+                </div>
+            </div> 
+        </div>
+  </body>
+</html>

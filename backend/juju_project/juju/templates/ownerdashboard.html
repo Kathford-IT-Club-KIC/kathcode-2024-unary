@@ -35,9 +35,9 @@
         <a href="{% url 'ownerorderdetails' %}">Order Details</a> 
       </div>
       <div class="menu-item">
-        <img style="color: aliceblue" src="{% static '/images/pin.svg' %}" alt="Locations" />
-        Locations
-      </div>
+      <img style="color: aliceblue" src="{% static '/images/customer.svg' %}" alt="Locations" />
+      <a href="">Menu</a>
+    </div>
       <h3 class="item" style="font-size: 15px">General</h3>
       <div class="menu-item">
         <img src="{% static '/images/setting.svg' %}" alt="Settings" />
@@ -159,7 +159,7 @@
 
         <div class="d-flex justify-content-center align-items-center gap-lg-5 mt-4">
           <button type="button" class="btn btn-warning btn-lg rounded-5">Add More</button>
-          <button type="button" class="btn btn-warning btn-lg rounded-5">Save</button>
+          <button type="button" class="btn btn-warning btn-lg rounded-5"><a href="{% url 'ownerhome' %}">save</a></button>
         </div>
       </div>
     </div>
